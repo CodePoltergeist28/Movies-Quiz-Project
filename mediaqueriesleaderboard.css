@@ -1,0 +1,9 @@
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container li{
+        padding: 1.5% 0.5%;
+    }
+    .container a{
+        font-size: 1.2rem;
+        
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="leaderboard.css">
+    <link rel="stylesheet" href="mediaqueriesleaderboard.css">
+</head>
+<body>
+    
+    <div class="container" id="navbar">
+        <ul>
+            <li id="WebName">Movie Trivia Quiz</li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="quiz.html" class="active">Quiz</a></li>
+            <li><a href="leaderboard.html" class="active">Leaderboard</a></li>
+            <li><a href="moviefacts.html" class="active">Movie Facts</a></li>
+            <li><a href="moviesoundtrack.html" class="active">Movie Soundtracks</a></li>
+        </ul>
+    </div>
+
+    <div class="leaderboard-container">
+        <h1>Quiz Leaderboard</h1>
+        <table id="leaderboardTable" border="1" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Leaderboard results will be dynamically added here -->
+            </tbody>
+        </table>
+
+        <a href="quiz.html" class="backToQuiz">Go back to the quiz</a> <!-- Link to navigate back to the quiz page -->
+    </div>
+
+    <script src="leaderboard.js"></script>
+</body>
+</html>

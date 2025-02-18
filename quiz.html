@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Trivia Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="mediaqueriesquiz.css">
+    <script src="quiz.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="container" id="navbar">
+        <ul>
+            <li id="WebName">Movie Trivia Quiz</li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="quiz.html" class="active">Quiz</a></li>
+            <li><a href="leaderboard.html" class="active">Leaderboard</a></li>
+            <li><a href="moviefacts.html" class="active">Movie Facts</a></li>
+            <li><a href="moviesoundtrack.html" class="active">Movie Soundtracks</a></li>
+        </ul>
+    </div>
+    <!-- Main Content -->
+    <div class="container" id="mainContent">
+        <div class="form-container">
+            <h2>Welcome to Movie Trivia Quiz!</h2>
+            
+            <!-- Quote Section -->
+            <blockquote class="movie-quote">
+                "I'm Not Supposed To Be Within Two Hundred Feet Of A School." – <strong>Alan</strong>
+            </blockquote>
+
+            <!-- Form for starting the quiz -->
+            <form id="quizForm">
+                <label for="userName">Your Name:</label>
+                <input type="text" id="userName" name="userName" required placeholder="Enter your name">
+
+                <label for="favMovie">Favorite Movie:</label>
+                <input type="text" id="favMovie" name="favMovie" required placeholder="Enter your favorite movie">
+
+                <button type="submit" id="startQuizBtn">Start Quiz</button>
+                <button type="button" id="clearFormBtn">Clear</button>
+            </form>
+        </div>
+    </div>
+    <!-- Quiz Page (hidden initially) -->
+    <div id="quizPage" style="display: none;">
+        <div class="container" id="quizContainer">
+            <ul id="questions">
+                <li class="question">
+                    <h4>Complete the famous line from Alan in The Hangover: "You guys might not know this, but I consider myself a bit of a ______."</h4>
+                    <p class="timer" id="timer1">15s</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q1" value="Genius">A. 'Genius'</li>
+                        <li><input type="radio" name="q1" value="Lone wolf" data-correct="true">B. 'Lone wolf'</li>
+                        <li><input type="radio" name="q1" value="Party animal">C. 'Party animal'</li>
+                        <li><input type="radio" name="q1" value="Risk-taker"> D. 'Risk-taker'</li>
+                    </ul>
+                    <button class="next-question-btn" style="display: none;">Next Question</button>
+                </li>
+            
+                <li class="question">
+                    <h4>In the movie 'How to lose a guy in 10 days' during the Knicks game what drink does Andie ordered?</h4>
+                    <p class="timer" id="timer2">15s</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q2" value="Coke">A. Coke with lime</li>
+                        <li><input type="radio" name="q2" value="Sprite">B. Sprite</li>
+                        <li><input type="radio" name="q2" value="Margarita">C. Margarita</li>
+                        <li><input type="radio" name="q2" value="Diet coke with lime" data-correct="true"> D. Diet coke with lime</li>
+                    </ul>
+                    <button class="next-question-btn" style="display: none;">Next Question</button>
+                </li>
+
+                <li class="question">
+                    <h4>In the movie 'The amazing spider-man 2' when peter and gwen decides to be friends again. They set some ground rule. What was the first rule?</h4>
+                    <p class="timer" id="timer3">15s</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q3" value="Don't tell me that i look amazing with your big brown doe eyes">A. 'Don't tell me that i look amazing with your big brown doe eyes'</li>
+                        <li><input type="radio" name="q3" value="That laugh is off the table" data-correct="true">B. 'That laugh is off the table'</li>
+                        <li><input type="radio" name="q3" value="No more of nose rub">C. 'No more of nose rub'</li>
+                        <li><input type="radio" name="q3" value="No more secrets">D. 'No more secrets' </li>
+                    </ul>
+                    <button class="next-question-btn" style="display: none;">Next Question</button>
+                </li>
+
+                <li class="question">
+                    <h4>In Interstellar, what is the name of the planet that Cooper and the team visit, where time moves significantly slower due to its proximity to the black hole?</h4>
+                    <p class="timer" id="timer4">15s</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q4" value="Miller's Planet" data-correct="true">A. Miller's Planet</li>
+                        <li><input type="radio" name="q4" value="Mann's Planet">B. Mann's Planet</li>
+                        <li><input type="radio" name="q4" value="Edmund's Planet">C. Edmund's Planet</li>
+                        <li><input type="radio" name="q4" value="Saturn's moon">D. Saturn's moon</li>
+                    </ul>
+                    <button class="next-question-btn" style="display: none;">Next Question</button>
+                </li>
+
+                <li class="question">
+                    <h4>What's the name of the actor that played Noah from the movie 'The Notebook'?</h4>
+                    <p class="timer" id="timer5">15s</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q5" value="Ryan Reynolds">A. Ryan Reynolds</li>
+                        <li><input type="radio" name="q5" value="Matthew McConaughey">B. Matthew McConaughey</li>
+                        <li><input type="radio" name="q5" value="Ryan Gosling" data-correct="true">C. Ryan Gosling</li>
+                        <li><input type="radio" name="q5" value="Tom Hanks">D. Tom Hanks</li>
+                    </ul>
+                    <button class="next-question-btn" style="display: none;">Next Question</button>
+                </li>
+
+                <li class="question">
+                    <h4>In the movie 'Forrest gump' What is Forrest's famous line that he says about life?</h4>
+                    <p class="timer" id="timer6">15s</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q6" value="Life is like a box of chocolates" data-correct="true">A. "Life is like a box of chocolates."</li>
+                        <li><input type="radio" name="q6" value="Life is a roller coaster.">B. "Life is a roller coaster."</li>
+                        <li><input type="radio" name="q6" value="Life is what you make of it.">C. "Life is what you make of it."</li>
+                        <li><input type="radio" name="q6" value="Life is a journey, not a destination.">D. "Life is a journey, not a destination."</li>
+                    </ul>
+                    <button class="next-question-btn" style="display: none;">Next Question</button>
+                </li>
+
+                <li class="question">
+                    <h4>What is the name of the website that Mark Zuckerberg creates in the movie 'The social network'?</h4>
+                    <p class="timer" id="timer7">15s</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q7" value="Facemash" data-correct="true">A. Facemash</li>
+                        <li><input type="radio" name="q7" value="Facebook">B. Facebook</li>
+                        <li><input type="radio" name="q7" value="MySpace">C. MySpace</li>
+                        <li><input type="radio" name="q7" value="PickOne">D. PickOne</li>
+                    </ul>
+                    <button class="next-question-btn" style="display: none;">Next Question</button>
+                </li>
+
+                <li class="question">
+                    <h4>What is the name of the school where Dead Poets Society takes place?</h4>
+                    <p class="timer" id="timer8">15s</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q8" value="Welton Academy" data-correct="true">A. Welton Academy</li>
+                        <li><input type="radio" name="q8" value="Harvard School">B. Harvard School</li>
+                        <li><input type="radio" name="q8" value="Oxford School">C. Oxford School</li>
+                        <li><input type="radio" name="q8" value="Princeton Academy">D. Princeton Academy</li>
+                    </ul>
+                    <button class="next-question-btn" style="display: none;">Next Question</button>
+                </li>
+
+                <li class="question">
+                    <h4>What was the name of the song that was played during the car ride in the movie 'The perks of being a wallflower'?</h4>
+                    <p class="timer" id="timer9">15s</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q9" value="Robbers by the 1975">A. Robbers by the 1975</li>
+                        <li><input type="radio" name="q9" value="High to death by Car seat Headrest">B. High to death by Car seat Headrest</li>
+                        <li><input type="radio" name="q9" value="Heroes by David Bowie" data-correct="true">C. Heroes by David Bowie</li>
+                        <li><input type="radio" name="q9" value="People never change by Peter Cat Recording Co.">D. People never change by Peter Cat Recording Co.</li>
+                    </ul>
+                    <button class="next-question-btn" style="display: none;">Next Question</button>
+                </li>
+
+                <li class="question">
+                    <h4>The dialogue "He can't see without his glasses. Put his glasses on!" is from which movie?</h4>
+                    <p class="timer" id="timer10">15s</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q10" value="We live in time">A. We live in time</li>
+                        <li><input type="radio" name="q10" value="My girl" data-correct="true">B. My girl</li>
+                        <li><input type="radio" name="q10" value="The substance">C. The substance</li>
+                        <li><input type="radio" name="q10" value="The batman">D. The batman</li>
+                    </ul>
+                    <button class="next-question-btn" style="display: none;">Next Question</button>
+                    
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
