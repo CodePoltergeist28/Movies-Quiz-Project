@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Handle form submission
     startQuizBtn.addEventListener('click', function (event) {
-        event.preventDefault(); // Prevent default form submission (to stop page refresh)
+        event.preventDefault(); 
 
         // Get values from form
         const userName = document.getElementById('userName').value;
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Timer function
     function startTimer(index) {
         const timerElement = questions[index].querySelector('.timer');
-        let timeLeft = 15; // 15 seconds per question
+        let timeLeft = 30; // 30 seconds per question
         timerElement.textContent = `${timeLeft}s`;
 
         timer = setInterval(function () {
